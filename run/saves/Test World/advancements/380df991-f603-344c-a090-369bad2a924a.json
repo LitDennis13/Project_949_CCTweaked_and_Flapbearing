@@ -8,9 +8,322 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:birch_forest": "2025-01-22 23:16:46 -0600",
+      "minecraft:river": "2025-01-26 23:30:51 -0600",
       "minecraft:meadow": "2025-01-22 23:16:45 -0600"
     },
     "done": false
+  },
+  "computercraft:recipes/redstone/monitor_normal": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/printer": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/cable": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/wireless_modem_advanced": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/pocket_computer_normal": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/monitor_advanced": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/pocket_computer_advanced": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_drive": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/speaker": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/wired_modem": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/wireless_modem_normal": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/decorations/skull_dan200": {
+    "criteria": {
+      "has_computer": "2025-01-23 11:29:23 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/cherry_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/bamboo_raft": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2025-01-26 23:30:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/charcoal": {
+    "criteria": {
+      "has_log": "2025-01-26 23:31:20 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2025-01-26 23:31:20 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2025-01-26 23:31:20 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_8": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_9": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_6": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_7": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_1": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_4": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_5": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_2": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_3": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_12": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_11": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_14": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_13": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_10": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_16": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "computercraft:recipes/redstone/disk_15": {
+    "criteria": {
+      "has_drive": "2025-01-26 23:31:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_slab": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_sign": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_trapdoor": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_pressure_plate": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_door": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_stairs": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2025-01-26 23:35:54 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2025-01-26 23:39:25 -0600"
+    },
+    "done": true
   },
   "DataVersion": 3465
 }
