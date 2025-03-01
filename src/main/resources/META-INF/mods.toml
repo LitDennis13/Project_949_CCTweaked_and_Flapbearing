@@ -63,6 +63,27 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.${mod_id}]]
+    modId="create"
+    mandatory=true
+    versionRange="[0.5.1.j,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.${mod_id}]]
+    modId="vs_clockwork"
+    mandatory=true
+    versionRange="[1.20.1-0.1.16-forge-b3b22e39fe,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="computercraft"
+    mandatory=true
+    versionRange="[1.113.1,)"
+    ordering="NONE"
+    side="BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.
