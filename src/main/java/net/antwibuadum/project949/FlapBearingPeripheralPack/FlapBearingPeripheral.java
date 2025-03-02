@@ -3,7 +3,7 @@ package net.antwibuadum.project949.FlapBearingPeripheralPack;
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.peripheral.IPeripheral;
 import net.antwibuadum.project949.FlapBearingBlockEvents;
-import net.antwibuadum.project949.RotationalPowerProvider;
+import net.antwibuadum.project949.FlapBearingPeripheralFunctions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -11,6 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nonnull;
 import java.util.Objects;
 
+// FlapBearingPeripheral class defines what should happen when a flap bearing is connected
+//  to a computer as well as what function it has denoted by "@LuaFunction"
 public class FlapBearingPeripheral implements IPeripheral {
     private final Level level;
     private final BlockPos pos;
@@ -22,7 +24,7 @@ public class FlapBearingPeripheral implements IPeripheral {
         boolean exist = false;
 
         // checks if the flap bearing is correctly oriented
-        if (RotationalPowerProvider.correctOrientation(level.getBlockState(this.pos), RotationalPowerProvider.GetComputerSide(level, this.pos))) {
+        if (FlapBearingPeripheralFunctions.correctOrientation(level.getBlockState(this.pos), FlapBearingPeripheralFunctions.GetComputerSide(level, this.pos))) {
             // checks if the current connected flap bearing is in the entity list
             for (int i = 0; i < FlapBearingBlockEvents.entities.size(); i++) {
                 if (FlapBearingBlockEvents.entities.get(i).pos.getX() == this.pos.getX()
@@ -33,7 +35,7 @@ public class FlapBearingPeripheral implements IPeripheral {
             }
             // if not then initialize the current flap bearing and add to the entity list
             if (!exist) {
-                   RotationalPowerProvider.Initialize(level, this.pos);
+                   FlapBearingPeripheralFunctions.Initialize(level, this.pos);
             }
         }
     }
@@ -54,6 +56,13 @@ public class FlapBearingPeripheral implements IPeripheral {
     public void setFlapAngle(double inputtedAngle) {
         float angle = (float)inputtedAngle;
 
+        //if (angle < -45F) {
+            //angle = -45F;
+        //}
+        //else if (angle > 45) {
+            //angle = 45;
+        //}
+
         for (int i = 0; i < FlapBearingBlockEvents.entities.size(); i++) {
             if (FlapBearingBlockEvents.entities.get(i).pos.getX() == this.pos.getX()
                     && FlapBearingBlockEvents.entities.get(i).pos.getY() == this.pos.getY()
@@ -71,11 +80,7 @@ public class FlapBearingPeripheral implements IPeripheral {
             if (FlapBearingBlockEvents.entities.get(i).pos.getX() == this.pos.getX()
                     && FlapBearingBlockEvents.entities.get(i).pos.getY() == this.pos.getY()
                     && FlapBearingBlockEvents.entities.get(i).pos.getZ() == this.pos.getZ()) {
-                FlapBearingBlockEvents.entities.get(i).entity.setAssembleNextTick(true);
-                FlapBearingBlockEvents.entities.get(i).entity.setChanged();
-                FlapBearingBlockEvents.entities.get(i).entity.sendData();
-
-                RotationalPowerProvider.forceBlockUpdate(level, FlapBearingBlockEvents.entities.get(i).pos);
+                FlapBearingBlockEvents.entities.get(i).assembleNextTick = true;
             }
         }
     }
@@ -87,16 +92,12 @@ public class FlapBearingPeripheral implements IPeripheral {
             if (FlapBearingBlockEvents.entities.get(i).pos.getX() == this.pos.getX()
                     && FlapBearingBlockEvents.entities.get(i).pos.getY() == this.pos.getY()
                     && FlapBearingBlockEvents.entities.get(i).pos.getZ() == this.pos.getZ()) {
-                FlapBearingBlockEvents.entities.get(i).angle = 0F;
-                FlapBearingBlockEvents.entities.get(i).entity.remove();
-                FlapBearingBlockEvents.entities.get(i).entity.setChanged();
-                FlapBearingBlockEvents.entities.get(i).entity.sendData();
+                FlapBearingBlockEvents.entities.get(i).disassembleNextTick = true;
 
-                RotationalPowerProvider.forceBlockUpdate(level, FlapBearingBlockEvents.entities.get(i).pos);
+                FlapBearingPeripheralFunctions.forceBlockUpdate(level, FlapBearingBlockEvents.entities.get(i).pos);
             }
         }
     }
-
 
 
 }

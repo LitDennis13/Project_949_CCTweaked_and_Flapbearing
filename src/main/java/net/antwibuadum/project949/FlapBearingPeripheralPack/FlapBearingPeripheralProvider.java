@@ -10,7 +10,6 @@ import org.valkyrienskies.clockwork.ClockworkBlocks;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-
 public class FlapBearingPeripheralProvider implements IPeripheralProvider {
     @Nullable
     @Override

@@ -12,18 +12,22 @@ import org.valkyrienskies.clockwork.content.contraptions.flap.FlapBearingBlockEn
 import java.util.ArrayList;
 import java.util.List;
 
-
+// FlapBearingBlockEvents class defines functions that will run the certain events are triggered
 @Mod.EventBusSubscriber(modid = Project949.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class FlapBearingBlockEvents {
     public static class EntityListType {
         public FlapBearingBlockEntity entity;
         public BlockPos pos;
         public float angle;
+        public boolean assembleNextTick;
+        public boolean disassembleNextTick;
 
         public EntityListType(FlapBearingBlockEntity e, BlockPos p, float a) {
             this.entity = e;
             this.pos = p;
             this.angle = a;
+            this.assembleNextTick = true;
+            this.disassembleNextTick = false;
         }
     }
 
@@ -39,7 +43,7 @@ public class FlapBearingBlockEvents {
 
         // if the block is a flap bearing then it gets added to the entity list
         if (level.getBlockState(pos).getBlock() == ClockworkBlocks.FLAP_BEARING.get()) {
-            RotationalPowerProvider.Initialize(level, pos);
+            FlapBearingPeripheralFunctions.Initialize(level, pos);
         }
     }
 
@@ -87,7 +91,7 @@ public class FlapBearingBlockEvents {
                             tempEntity.setChanged();
                             tempEntity.sendData();
 
-                            RotationalPowerProvider.forceBlockUpdate(level, FlapBearingBlockEvents.entities.get(j).pos);
+                            FlapBearingPeripheralFunctions.forceBlockUpdate(level, FlapBearingBlockEvents.entities.get(j).pos);
 
                             entities.remove(j);
                             break;
@@ -104,12 +108,18 @@ public class FlapBearingBlockEvents {
     public static void onServerTick(TickEvent.ServerTickEvent event) {
         if (event.phase == TickEvent.Phase.START) {
             for (int i = 0; i < entities.size(); i++) {
+                if (entities.get(i).assembleNextTick) {
+                    entities.get(i).entity.assemble();
+                    entities.get(i).assembleNextTick = false;
+                }
+                else if (entities.get(i).disassembleNextTick) {
+                    entities.get(i).angle = 0;
+                    entities.get(i).entity.remove();
+                    entities.get(i).disassembleNextTick = false;
+                }
                 entities.get(i).entity.setAngle(entities.get(i).angle);
                 entities.get(i).entity.setChanged();
                 entities.get(i).entity.sendData();
-
-
-
             }
         }
     }

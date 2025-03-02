@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.valkyrienskies.clockwork.content.contraptions.flap.FlapBearingBlockEntity;
 
 
-public class RotationalPowerProvider {
+public class FlapBearingPeripheralFunctions {
     private static final float DEFAULT_ANGLE = 0F;
 
     // possible sides of the computer
@@ -27,9 +27,6 @@ public class RotationalPowerProvider {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof FlapBearingBlockEntity block_entity) {
             if (orientation_correct && !level.isClientSide) {
-
-                block_entity.setAssembleNextTick(true);
-                block_entity.sendData();
 
                 FlapBearingBlockEvents.EntityListType listItem = new FlapBearingBlockEvents.EntityListType(block_entity, pos, DEFAULT_ANGLE );
                 FlapBearingBlockEvents.entities.add(listItem);
